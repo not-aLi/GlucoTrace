@@ -3,6 +3,8 @@ import Header from "./Header";
 import HeroSection from "./HeroSection";
 import HealthAdvice from "./HealthAdvice";
 import MainSection from "./MainSection";
+import DiabetesAdvice from "./DiabetesAdvice";
+import Contact from "./Contact";
 
 const MainLayout = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -32,7 +34,9 @@ const MainLayout = () => {
       <Header isSticky={isSticky} />
       <HeroSection heroRef={heroRef} />
       <HealthAdvice />
-      <MainSection/>
+      <MainSection />
+      <DiabetesAdvice />
+      <Contact />
     </>
   );
 };

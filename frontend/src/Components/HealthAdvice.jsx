@@ -11,7 +11,7 @@ const HealthAdvice = () => {
         <h1 className="md:text-4xl text-3xl font-lora font-semibold">
           {healthAdvice.heading}
         </h1>
-        <p className="font-roboto text-base md:text-lg text-justify">
+        <p className="font-roboto text-base md:text-lg md:text-justify text-center">
           {
             healthAdvice.description.split(
               "monitor your blood glucose levels regularly"

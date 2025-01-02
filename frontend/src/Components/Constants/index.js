@@ -39,3 +39,19 @@ export const features = [
       "Generate PDF or CSV reports to share your blood sugar progress with your doctor or healthcare provider. You can email or download the reports. These reports include detailed insights, such as meal-related sugar levels and insulin tracking at different times of the day.",
   },
 ];
+
+export const complications = {
+  heading: "Recognize High Blood Sugar Symptoms",
+  description:
+    "According to the American Diabetes Association (ADA), high blood sugar can cause symptoms like frequent urination, increased thirst, and fatigue. These symptoms are common in both Type 1 and Type 2 diabetes. If you notice any of these signs, it’s important to monitor your levels and consult with your doctor to adjust your diabetes management plan.",
+};
+
+export const contact = {
+  heading: "Contact Us",
+  description1:
+    "At GlucoTrace, your feedback is invaluable. We’re dedicated to improving our website to better serve your needs and help you manage your diabetes effectively.",
+  description2:
+    "If you have any questions, suggestions, or need assistance, don’t hesitate to reach out. We aim to respond within 24 to 48 hours.",
+  email: "Email us at: contact.monkebytes@gmail.com",
+  required: "Fields marked with an asterisk (*) are required.",
+};

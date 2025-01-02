@@ -4,7 +4,7 @@ import Router from "./Components/Router/Router";
 function App() {
   return (
     <>
-      <div className="antialiased">
+      <div className=" antialiased">
         <Router />
       </div>
     </>
