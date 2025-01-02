@@ -11,7 +11,12 @@ const HeroSection = ({ heroRef }) => {
     >
       <div className="flex items-center md:flex-row flex-col-reverse md:justify-between lg:mx-36 md:mx-28 gap-6 md:gap-0">
         {/* Text */}
-        <motion.section className="whitespace-normal space-y-4 text-left md:mx-0 mx-6">
+        <motion.section
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="whitespace-normal space-y-4 text-left md:mx-0 mx-6"
+        >
           <h1 className="font-lora md:text-4xl text-3xl font-bold text-amber-400">
             {Hero.heading}
           </h1>
@@ -22,9 +27,12 @@ const HeroSection = ({ heroRef }) => {
         </motion.section>
 
         {/* Laptop image */}
-        <img
+        <motion.img
           src={mockup}
           alt=""
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           className="lg:w-[500px] w-96 md:w-80 mx-auto"
         />
       </div>

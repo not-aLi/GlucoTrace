@@ -13,12 +13,7 @@ const Contact = () => {
         <p className="font-roboto md:text-lg">{contact.description2}</p>
         <p className="font-roboto md:text-lg mb-2">
           <strong>Email us at: </strong>
-          <a
-            href="mailto:contact.monkebytes@gmail.com?subject=Feedback%20for%20GlucoTrace"
-            className="underline font-semibold text-indigo-900"
-          >
-            contact.monkebytes@gmail.com
-          </a>
+          <span>contact.monkebytes@gmail.com</span>
         </p>
         <p className="font-roboto md:text-base italic text-sm">
           {contact.required}

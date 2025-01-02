@@ -5,8 +5,9 @@ import HealthAdvice from "./HealthAdvice";
 import MainSection from "./MainSection";
 import DiabetesAdvice from "./DiabetesAdvice";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
-const MainLayout = () => {
+const HomePage = () => {
   const [isSticky, setIsSticky] = useState(false);
   const heroRef = useRef(null);
 
@@ -37,8 +38,9 @@ const MainLayout = () => {
       <MainSection />
       <DiabetesAdvice />
       <Contact />
+      <Footer />
     </>
   );
 };
 
-export default MainLayout;
+export default HomePage;

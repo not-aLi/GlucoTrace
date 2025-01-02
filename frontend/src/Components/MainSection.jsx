@@ -1,6 +1,7 @@
 import React from "react";
 import { features, Main } from "./Constants";
 import Highlighter from "react-highlight-words";
+import { motion } from "framer-motion";
 
 const MainSection = () => {
   const wordsToBold = [
@@ -22,9 +23,15 @@ const MainSection = () => {
       className="bg-amber-400 selection:bg-indigo-800 selection:text-amber-300"
     >
       <div className="flex flex-col items-center lg:mx-44 gap-4 px-4 py-4 pt-20">
-        <h1 className="font-lora text-center md:text-4xl text-3xl font-bold text-indigo-900">
+        <motion.h1
+          initial={{ scale: 0.5 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="font-lora text-center md:text-4xl text-3xl font-bold text-indigo-900"
+        >
           {Main.heading}
-        </h1>
+        </motion.h1>
         <p className="font-roboto font-medium md:text-lg text-base md:leading-normal text-black text-center selection:text-white">
           {Main.description.split("powerful glucose tracker")[0]}
           <strong>powerful glucose tracker</strong>
@@ -40,7 +47,11 @@ const MainSection = () => {
 
       <section className="flex flex-col md:flex-row  md:px-12 py-12 mx-auto flex-wrap">
         {features.map((feature, index) => (
-          <div
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
             key={index}
             className="flex flex-col items-center md:items-start text-center md:text-left rounded-xl p-6 mx-auto"
           >
@@ -65,7 +76,7 @@ const MainSection = () => {
                 />
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </section>
     </main>
