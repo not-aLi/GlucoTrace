@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { complications } from "./Constants";
 import { motion } from "framer-motion";
 
 const DiabetesAdvice = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   return (
     <section
       className="h-screen bg-cover bg-center bg-no-repeat bg-fixed flex items-center justify-center"
-      style={{ backgroundImage: "url('/diabeticBG2.jpg')" }}
+      style={{
+        backgroundImage: isImageLoaded
+          ? "url('/diabeticBG2.webp')"
+          : "url('/blurBG2.png')",
+        transition: "background-image 0.5s ease-out",
+        backgroundColor: "#f0f0f0",
+      }}
     >
+      <img
+        src="/diabeticBG2.webp"
+        alt="Background"
+        className="hidden"
+        onLoad={handleImageLoad}
+      />
+
       <motion.div
         initial={{ scale: 0.5 }}
         whileInView={{ scale: 1 }}

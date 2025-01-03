@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mockup from "/laptopMockup.png";
 import { Hero } from "./Constants/index";
 import { motion } from "framer-motion";
 
 const HeroSection = ({ heroRef }) => {
+  
   return (
     <section
       ref={heroRef}
@@ -14,7 +15,7 @@ const HeroSection = ({ heroRef }) => {
         <motion.section
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           className="whitespace-normal space-y-4 text-left md:mx-0 mx-6"
         >
           <h1 className="font-lora md:text-4xl text-3xl font-bold text-amber-400">
@@ -32,7 +33,7 @@ const HeroSection = ({ heroRef }) => {
           alt=""
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="lg:w-[500px] w-96 md:w-80 mx-auto"
         />
       </div>

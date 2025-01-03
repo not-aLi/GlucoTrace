@@ -50,14 +50,15 @@ const MainSection = () => {
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 1 }}
             key={index}
             className="flex flex-col items-center md:items-start text-center md:text-left rounded-xl p-6 mx-auto"
           >
             <img
               src={feature.img}
               alt=""
+              loading="lazy"
               className={`w-80 rounded-xl mb-6 ${
                 index === 0 ? "h-[236px]" : ""
               }`}

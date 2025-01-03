@@ -4,10 +4,15 @@ import GlucoTrace from "/GlucoTraceDark.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-indigo-900 text-white py-8 px-6">
+    <footer className="bg-indigo-900 text-white py-8 px-6 selection:bg-amber-400 selection:text-indigo-800">
       {/* Logo */}
       <div className="flex justify-center mb-6">
-        <img src={GlucoTrace} alt="GlucoTrace" className="w-40 md:w-56" />
+        <img
+          src={GlucoTrace}
+          alt="GlucoTrace"
+          loading="lazy"
+          className="w-40 md:w-56"
+        />
       </div>
 
       {/* Content Section */}

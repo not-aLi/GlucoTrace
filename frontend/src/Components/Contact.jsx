@@ -3,19 +3,30 @@ import { contact } from "./Constants";
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-amber-400">
+    <section
+      id="contact"
+      className="bg-amber-400 selection:bg-indigo-800 selection:text-amber-300"
+    >
       {/* Contact Details */}
       <div className="flex flex-col items-start gap-2 md:px-4 px-6  pt-20 md:mx-20 whitespace-normal">
-        <h1 className="md:text-4xl text-3xl font-bold font-lora mb-2 text-indigo-900">
+        <h1 className="md:text-4xl text-3xl font-bold font-lora mb-2 text-indigo-800">
           {contact.heading}
         </h1>
-        <p className="font-roboto md:text-lg mb-4">{contact.description1}</p>
-        <p className="font-roboto md:text-lg">{contact.description2}</p>
-        <p className="font-roboto md:text-lg mb-2">
-          <strong>Email us at: </strong>
-          <span>contact.monkebytes@gmail.com</span>
+        <p className="font-roboto md:text-lg mb-4 selection:bg-indigo-800 selection:text-white">
+          {contact.description1}
         </p>
-        <p className="font-roboto md:text-base italic text-sm">
+        <p className="font-roboto md:text-lg selection:bg-indigo-800 selection:text-white">
+          {contact.description2}
+        </p>
+        <p className="font-roboto md:text-lg mb-2 selection:bg-indigo-800 selection:text-white">
+          <strong className="selection:bg-indigo-800 selection:text-white">
+            Email us at:{" "}
+          </strong>
+          <span className="selection:bg-indigo-800 selection:text-white">
+            contact.monkebytes@gmail.com
+          </span>
+        </p>
+        <p className="font-roboto md:text-base italic text-sm selection:bg-indigo-800 selection:text-white">
           {contact.required}
         </p>
       </div>
@@ -27,7 +38,7 @@ const Contact = () => {
           {/* First Name */}
           <div className="flex flex-col w-full">
             <label
-              className="font-semibold text-indigo-900 mb-2 font-lora"
+              className="font-semibold text-indigo-800 mb-2 font-lora"
               htmlFor="first-name"
             >
               First Name *
@@ -43,7 +54,7 @@ const Contact = () => {
           {/* Last Name */}
           <div className="flex flex-col w-full">
             <label
-              className="font-semibold text-indigo-900 mb-2 font-lora"
+              className="font-semibold text-indigo-800 mb-2 font-lora"
               htmlFor="last-name"
             >
               Last Name *
@@ -59,7 +70,7 @@ const Contact = () => {
         {/* Email */}
         <div className="flex flex-col">
           <label
-            className="font-semibold text-indigo-900 mb-2 font-lora"
+            className="font-semibold text-indigo-800 mb-2 font-lora"
             htmlFor="email"
           >
             Email *
@@ -75,7 +86,7 @@ const Contact = () => {
         {/* Message */}
         <div className="flex flex-col">
           <label
-            className="font-semibold text-indigo-900 mb-2 font-lora"
+            className="font-semibold text-indigo-800 mb-2 font-lora"
             htmlFor="message"
           >
             Message
